@@ -97,3 +97,13 @@ Routes use the URL hash: #/, #/about, #/projects and #/projects/onespace (also a
 Edit project summaries in src/data/projects.ts and detail text in src/data/caseStudies.ts. Add verified screenshots and further technical detail there as the case studies develop. The CV is public/John_Murphy_CV_2026.pdf; replace it when updating the download. Its URL uses Vite's BASE_URL so it respects the repository base path at deployment.
 
 No deployment or GitHub push is performed by this update. Before deployment, configure the Vite base for the GitHub repository and build as described above.
+
+## GitHub Pages deployment setup
+
+The configuration now uses /john-portfolio/ as its base path. This supersedes the earlier instructions to defer configuration. Local development now opens at http://localhost:5173/john-portfolio/ (use the port printed by Vite).
+
+In GitHub, open Settings > Pages and select GitHub Actions as the Source. Commit and push these files to main. The Deploy portfolio to GitHub Pages workflow installs locked dependencies, checks code, builds dist, and publishes it. Follow the run in the Actions tab. No personal access token or extra secret is needed.
+
+Live address after a successful deployment: https://jaxkmurphy.github.io/john-portfolio/
+
+Every subsequent push to main updates the public site. The workflow can also be run manually from Actions. Changes saved locally remain local until committed and pushed. Hash routes support refreshing About and project pages without a custom 404 fallback.
