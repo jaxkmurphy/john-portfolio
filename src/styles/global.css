@@ -32,3 +32,18 @@ footer { border-top: 1px solid #343b44; padding-block: 28px; color: #aeb7c3; fon
 .skip-link { position: absolute; top: -100px; left: 20px; padding: 12px; background: #c4f279; color: #101419; }
 .skip-link:focus { top: 12px; }
 @media (max-width: 600px) { .hero { padding-block: 64px; } .project { grid-template-columns: 1fr; gap: 0; } .about { grid-template-columns: 1fr; gap: 0; } nav { gap: 18px; } }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 40px;
+}
+
+.skills-grid h3 {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
