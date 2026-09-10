@@ -11,6 +11,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         <ul className="tags" aria-label={`${project.title} technologies`}>
           {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
         </ul>
+        <a className="text-link" href={`#/projects/${project.id}`}>Explore {project.title} <span aria-hidden="true">→</span></a>
       </div>
     </article>
   )

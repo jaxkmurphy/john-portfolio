@@ -70,3 +70,24 @@ footer { border-top: 1px solid #343b44; padding-block: 28px; color: #aeb7c3; fon
 #experience li + li {
   margin-top: 12px;
 }
+
+/* Shared page layouts and navigation */
+nav a[aria-current="page"] { color: #c4f279; text-decoration: underline; text-underline-offset: 8px; }
+.text-link { color: #c4f279; text-decoration: underline; text-underline-offset: 5px; display: inline-block; padding-block: 8px; }
+.page-title, .about h1 { font-size: clamp(2.6rem, 6vw, 4.5rem); }
+.hero { padding-block: 64px; }
+.skills-summary { border-top: 1px solid #343b44; }
+.contact-footer { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.contact-footer strong { font-size: 1.25rem; color: #ecf0f5; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; }
+.footer-links a { padding-block: 8px; }
+.case-header { padding-block: 24px 32px; }
+.case-header > p, .case-section p { color: #b6bfca; }
+.case-section { border-top: 1px solid #343b44; padding-block: 24px; max-width: 780px; }
+.case-section p { font-size: 1.125rem; }
+main:focus { outline: none; }
+@media (max-width: 600px) {
+  .site-header { flex-wrap: wrap; gap: 16px; }
+  .contact-footer { flex-direction: column; }
+  .hero h1 { font-size: 2.7rem; }
+}

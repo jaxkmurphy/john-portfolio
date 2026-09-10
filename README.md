@@ -86,3 +86,14 @@ Keep the default Vite configuration during local development. When the GitHub re
 Later we will add a GitHub Actions workflow to install from the lockfile with npm ci, build, and deploy dist. Deployment and a workflow are intentionally deferred to a later lesson.
 
 References: https://vite.dev/guide/ and https://vite.dev/guide/static-deploy.html#github-pages
+
+
+## Multi-page portfolio update
+
+The homepage is now shorter. About holds the biography, experience, education and full skills list. Projects lists the three projects, each linking to its own detail page. Shared navigation and contact/CV links live in App.tsx.
+
+Routes use the URL hash: #/, #/about, #/projects and #/projects/onespace (also ascend and bookify). This allows refreshes and direct links on GitHub Pages without server rewrite rules. App.tsx selects the page, updates its title, and manages focus when navigation changes.
+
+Edit project summaries in src/data/projects.ts and detail text in src/data/caseStudies.ts. Add verified screenshots and further technical detail there as the case studies develop. The CV is public/John_Murphy_CV_2026.pdf; replace it when updating the download. Its URL uses Vite's BASE_URL so it respects the repository base path at deployment.
+
+No deployment or GitHub push is performed by this update. Before deployment, configure the Vite base for the GitHub repository and build as described above.
