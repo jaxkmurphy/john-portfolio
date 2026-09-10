@@ -1,6 +1,7 @@
 import { ProjectCard } from '../components/ProjectCard'
 import { projects } from '../data/projects'
 import { SkillsSection } from '../components/SkillsSection'
+import { ExperienceSection } from '../components/ExperienceSection'
 
 export function HomePage() {
   return (
@@ -22,6 +23,7 @@ export function HomePage() {
           {projects.map((project, index) => <ProjectCard key={project.id} project={project} index={index} />)}
         </section>
         <SkillsSection />
+        <ExperienceSection />
         <section id="about" className="section about" aria-labelledby="about-title">
           <h2 id="about-title">Across platforms.<br />Focused on people.</h2>
           <p>My projects span education support, mobile book management and game development. I’m interested in how thoughtful interfaces and the systems behind them come together to create useful, engaging experiences.</p>

@@ -47,3 +47,26 @@ footer { border-top: 1px solid #343b44; padding-block: 28px; color: #aeb7c3; fon
     grid-template-columns: 1fr;
   }
 }
+
+#experience article {
+  border-top: 1px solid #343b44;
+  padding-block: 24px;
+}
+
+#experience h3 {
+  font-size: 1.5rem;
+}
+
+#experience article > p:not(.eyebrow),
+#experience li {
+  color: #b6bfca;
+}
+
+#experience ul {
+  max-width: 720px;
+  padding-left: 1.25rem;
+}
+
+#experience li + li {
+  margin-top: 12px;
+}
