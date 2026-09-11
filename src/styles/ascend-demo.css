@@ -1,0 +1,23 @@
+.creator { margin-block: 20px 56px; }
+.creator-intro,.creator-caption { color: #b6bfca; max-width: 800px; }
+.creator-layout { display:grid; grid-template-columns: 1fr 1fr; gap:24px; align-items:start; }
+.creator-panel { background:#2d241b; border:5px ridge #897246; border-radius:8px; padding:12px; color:#f2e5c7; box-shadow:0 12px 30px #0005; }
+.creator-panel h3 { background:linear-gradient(#51452f,#292116); border:1px solid #a28b57; text-align:center; font:700 1.4rem Georgia,serif; padding:14px; margin:0 0 12px; }
+.creator-row { display:grid; grid-template-columns:44px 1fr 44px; align-items:center; gap:8px; background:linear-gradient(#443b2d,#241e17); border:1px solid #675943; margin-block:3px; min-height:56px; text-align:center; }
+.creator-row span { display:block; font-size:.875rem; color:#dfd0b3; }
+.creator-row strong { display:block; font-weight:500; font-size:1rem; }
+.creator button { cursor:pointer; font:inherit; min-height:44px; }
+.creator-row button { color:#ebc875; font-size:2rem; background:linear-gradient(#56462b,#201b14); border:2px outset #9a8050; }
+.creator-row button:disabled { opacity:.4; cursor:default; }
+.creator button:focus-visible { outline:3px solid #ffe39a; outline-offset:3px; }
+.creator-row button:hover:not(:disabled) { background:#6a5431; }
+.creator-create { display:block; margin:20px auto 10px; min-width:160px; color:#f2eccf; font:700 1.4rem Georgia,serif!important; border:4px ridge #c2a665; border-radius:6px; background:linear-gradient(#476b25,#183e10); padding:8px 24px; }
+.creator-reset { display:block; margin:auto; color:#e6d4ab; border:0; background:transparent; text-decoration:underline; }
+.creator-summary { padding:24px; border:1px solid #4f5965; border-radius:8px; background:#191f27; }
+.creator-summary h3 { font-size:1.6rem; }
+.creator-label,.creator-caption { font-size:.875rem; }
+.creator-label { color:#e5c98f; }
+.creator-summary dl > div { display:flex; justify-content:space-between; gap:16px; padding:10px 0; border-bottom:1px solid #39414b; }
+.creator-summary dt { color:#b6bfca; }
+.creator-summary dd { margin:0; }
+@media(max-width:700px) { .creator-layout { grid-template-columns:1fr; } .creator-panel { order:-1; } }
