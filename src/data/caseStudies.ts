@@ -29,7 +29,7 @@ export const caseStudies: Record<string, CaseStudy> = {
     role: 'Mobile application development and API integration',
     sections: [
       { title: 'Project overview', text: 'Bookify is an Android application for organizing personal book collections, inspired by the library experience of Spotify.' },
-      { title: 'Managing a collection', text: 'Users can add, update, delete and search books and booklists. Google Books API integration supports book discovery, while Firebase provides cloud-based storage and persistence.' },
+      { title: 'Managing a collection', text: 'Users can add, update, delete and search books and booklists. Google Books API integration supports book discovery. Booklists are stored in local JSON files; page numbers, ratings and Catch up notes are saved using Android preferences.' },
       { title: 'Technical approach', text: 'The application was built in Kotlin with Android development tools and Gradle, and tested using an Android emulator.' },
     ],
   },

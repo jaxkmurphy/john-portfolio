@@ -1,0 +1,36 @@
+.bookify-demo { margin-block:24px 56px; }
+.bookify-caption { color:#b6bfca; max-width:800px; }
+.bookify-app { max-width:720px; margin:28px auto; border:2px solid #c9bedb; border-radius:24px; overflow:hidden; background:#fffbfe; color:#1c1b1f; }
+.bookify-toolbar { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:18px 24px; background:#6750a4; color:white; }
+.bookify-toolbar strong { font-size:1.5rem; }
+.bookify-body { padding:24px; }
+.bookify-body h3 { font-size:1.6rem; margin:16px 0; }
+.bookify-body h4 { font-size:1.15rem; margin:16px 0; }
+.bookify-app button,.bookify-app input,.bookify-app select,.bookify-app textarea { font:inherit; }
+.bookify-app button { min-height:44px; padding:10px 16px; border:1px solid #6750a4; border-radius:20px; background:#eaddff; color:#21005d; cursor:pointer; }
+.bookify-app button:hover { background:#d8c8f0; }
+.bookify-app :is(button,input,select,textarea):focus-visible { outline:3px solid #4f2d8a; outline-offset:3px; }
+.bookify-toolbar button:focus-visible { outline-color:white; }
+.bookify-app input,.bookify-app textarea,.bookify-app select { min-height:48px; width:100%; padding:12px; color:#1c1b1f; background:white; border:1px solid #79747e; border-radius:8px; }
+.bookify-app textarea { min-height:110px; resize:vertical; }
+.bookify-search > div { display:flex; gap:10px; margin-top:8px; }
+.bookify-search input { min-width:0; }
+.bookify-result { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 0; border-bottom:1px solid #cac4d0; }
+.bookify-result p { margin:4px 0; color:#49454f; }
+.bookify-picker { background:#e8def8; padding:18px; border-radius:12px; margin-block:18px; }
+.bookify-picker select { margin-block:10px; }
+.bookify-actions { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-block:16px; }
+.bookify-lists { display:grid; gap:12px; }
+.bookify-app .bookify-list { display:flex; flex-direction:column; gap:8px; text-align:left; background:#f1ebf6; border-color:#cac4d0; padding:18px; border-radius:12px; }
+.bookify-list strong { font-size:1.15rem; }
+.bookify-list small { font-size:.875rem; }
+.bookify-form { display:grid; gap:12px; }
+.bookify-form label { font-weight:650; }
+.bookify-form fieldset { border:0; padding:0; margin:14px 0; min-width:0; }
+.bookify-stars { display:flex; flex-wrap:wrap; gap:4px; }
+.bookify-stars button:not(:last-child) { font-size:1.6rem; padding:6px 10px; }
+.bookify-stars button[aria-pressed="true"] { outline:2px solid #6750a4; outline-offset:1px; }
+.bookify-app .bookify-open { display:flex; flex-direction:column; gap:5px; background:transparent; border:0; text-align:left; padding:8px 0; }
+.bookify-empty { padding:24px; background:#f1ebf6; border-radius:12px; }
+.bookify-status { color:#4f378b; min-height:24px; }
+@media(max-width:500px) { .bookify-body,.bookify-toolbar { padding:16px; } .bookify-result { flex-wrap:wrap; } }

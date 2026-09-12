@@ -1,3 +1,4 @@
+import { BookifyDemo } from '../components/BookifyDemo'
 import { AscendDemo } from '../components/AscendDemo'
 import { WhenThenDemo } from '../components/WhenThenDemo'
 import type { Project } from '../data/projects'
@@ -15,6 +16,7 @@ export function ProjectPage({ project }: { project: Project }) {
       <ul className="tags" aria-label="Technologies">{project.technologies.map(technology => <li key={technology}>{technology}</li>)}</ul>
       <p><strong>My work:</strong> {study.role}</p>
     </header>
+    {project.id === 'bookify' && <BookifyDemo />}
     {project.id === 'ascend' && <AscendDemo />}
     {project.id === 'onespace' && <WhenThenDemo />}
     {study.sections.map(section => <section className="case-section" key={section.title}>
