@@ -21,3 +21,14 @@
 .creator-summary dt { color:#b6bfca; }
 .creator-summary dd { margin:0; }
 @media(max-width:700px) { .creator-layout { grid-template-columns:1fr; } .creator-panel { order:-1; } }
+
+.ascend-model-canvas { width:100%; height:420px; background:radial-gradient(ellipse at center,#394235,#111914 75%); border-radius:8px; overflow:hidden; }
+.ascend-model-canvas canvas { display:block; touch-action:none; }
+.ascend-model-controls { display:flex; flex-wrap:wrap; gap:8px; }
+.ascend-model button,.ascend-model-start button { border:1px solid #a28b57; border-radius:5px; background:#382e20; color:#f2e5c7; padding:8px 12px; }
+.ascend-model p { font-size:.875rem; color:#b6bfca; }
+.ascend-model-start { padding:48px 16px; text-align:center; background:radial-gradient(ellipse at center,#394235,#111914); border-radius:8px; }
+@media(max-width:700px) { .ascend-model-canvas { height:360px; } .creator-panel { order:initial; } }
+
+.ascend-model-controls label { flex:1; font-size:.875rem; color:#e6d4ab; margin-bottom:12px; }
+.ascend-model-controls select { display:block; width:100%; min-height:44px; background:#241e17; color:#f2e5c7; border:1px solid #a28b57; border-radius:5px; padding:8px; margin-top:6px; }
