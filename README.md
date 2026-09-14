@@ -66,7 +66,7 @@ npm run dev
 
 Open the local address printed in the terminal. Keep that terminal running while editing; Ctrl+C stops it. Edit a description in src/data/projects.ts and save to see the update. Then try changing spacing in src/styles/global.css.
 
-The first homepage includes an introduction, OneSpace as the first project, Ascend, Bookify and an About section. It deliberately has no made-up contact details, CV download or empty case-study links.
+The first homepage includes an introduction, Orbitell as the first project, Ascend, Bookify and an About section. It deliberately has no made-up contact details, CV download or empty case-study links.
 
 ```powershell
 npm run build
@@ -77,7 +77,7 @@ Build checks TypeScript and creates the publishable dist folder. Lint checks for
 
 ## 6. Next lessons
 
-Review the introduction and project descriptions. Add a Skills section, verified Experience content, contact links and a real CV. Then build the OneSpace case study, followed by Ascend and Bookify. Use redacted screenshots with permission.
+Review the introduction and project descriptions. Add a Skills section, verified Experience content, contact links and a real CV. Then build the Orbitell case study, followed by Ascend and Bookify. Use redacted screenshots with permission.
 
 ## 7. GitHub Pages later
 
@@ -92,7 +92,7 @@ References: https://vite.dev/guide/ and https://vite.dev/guide/static-deploy.htm
 
 The homepage is now shorter. About holds the biography, experience, education and full skills list. Projects lists the three projects, each linking to its own detail page. Shared navigation and contact/CV links live in App.tsx.
 
-Routes use the URL hash: #/, #/about, #/projects and #/projects/onespace (also ascend and bookify). This allows refreshes and direct links on GitHub Pages without server rewrite rules. App.tsx selects the page, updates its title, and manages focus when navigation changes.
+Routes use the URL hash: #/, #/about, #/projects and #/projects/orbitell (also ascend and bookify). This allows refreshes and direct links on GitHub Pages without server rewrite rules. App.tsx selects the page, updates its title, and manages focus when navigation changes.
 
 Edit project summaries in src/data/projects.ts and detail text in src/data/caseStudies.ts. Add verified screenshots and further technical detail there as the case studies develop. The CV is public/John_Murphy_CV_2026.pdf; replace it when updating the download. Its URL uses Vite's BASE_URL so it respects the repository base path at deployment.
 

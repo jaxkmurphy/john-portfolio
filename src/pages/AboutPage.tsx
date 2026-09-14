@@ -17,7 +17,7 @@ export function AboutPage() {
               interface design to build useful, engaging experiences.
             </p>
             <p>
-              I’m currently developing OneSpace, an education support
+              I’m currently developing Orbitell, an education support
               platform for special-class settings, bringing together
               classroom tools and separate experiences for staff
               and children.

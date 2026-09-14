@@ -15,7 +15,8 @@ function getRoute() {
   if (!hash || hash === '#home') return '/'
   if (hash === '#projects') return '/projects'
   if (hash === '#about') return '/about'
-  return hash.slice(1).replace(/\/$/, '') || '/'
+  const path = hash.slice(1).replace(/\/$/, '') || '/'
+  return path === '/projects/onespace' ? '/projects/orbitell' : path
 }
 
 export default function App() {
@@ -33,7 +34,7 @@ export default function App() {
   return <>
     <a className="skip-link" href="#main" onClick={event => { event.preventDefault(); main.current?.focus(); main.current?.scrollIntoView() }}>Skip to content</a>
     <header className="site-header container">
-      <a className="brand" href="#/" aria-label="John, home">john<span>.</span></a>
+      <a className="brand" href="#/" aria-label="John, home">John<span>.</span></a>
       <nav aria-label="Main navigation">
         <a href="#/" aria-current={route === '/' ? 'page' : undefined}>Home</a>
         <a href="#/projects" aria-current={route.startsWith('/projects') ? 'page' : undefined}>Projects</a>

@@ -18,7 +18,7 @@ export function ProjectPage({ project }: { project: Project }) {
     </header>
     {project.id === 'bookify' && <BookifyDemo />}
     {project.id === 'ascend' && <AscendDemo />}
-    {project.id === 'onespace' && <WhenThenDemo />}
+    {project.id === 'orbitell' && <WhenThenDemo />}
     {study.sections.map(section => <section className="case-section" key={section.title}>
       <h2>{section.title}</h2><p>{section.text}</p>
     </section>)}

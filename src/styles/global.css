@@ -91,3 +91,17 @@ main:focus { outline: none; }
   .contact-footer { flex-direction: column; }
   .hero h1 { font-size: 2.7rem; }
 }
+
+/* Homepage introduction and flagship project. */
+.hero { padding-block:48px 56px; }
+.hero h1 { font-size:clamp(2.4rem,5.2vw,4rem); line-height:1.1; margin-block:18px 22px; }
+.hero .intro { max-width:650px; margin-bottom:26px; }
+.hero-actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
+.button.button-secondary { background:transparent; border:1px solid #58624e; color:#e8edf4; }
+.button.button-secondary:hover { background:#20291d; border-color:#c4f279; }
+.link-format { font-size:.75rem; align-self:center; color:#b6bfca; }
+.hero-contact { display:inline-flex; align-items:center; gap:12px; min-height:48px; padding:10px 16px; }
+.project-featured { border:1px solid #52653b; border-left:4px solid #c4f279; border-radius:10px; padding:28px; margin-bottom:28px; background:linear-gradient(120deg,#1c271d,#151c22); }
+.project-featured h3 { font-size:clamp(2rem,4vw,2.75rem); }
+.project-featured p.project-stage { color:#c4f279; font-size:.875rem; }
+@media(max-width:600px) { .hero { padding-block:36px 40px; } .project-featured { padding:22px; } .hero-actions .button { justify-content:space-between; width:100%; } .hero-contact { padding-left:0; } }
