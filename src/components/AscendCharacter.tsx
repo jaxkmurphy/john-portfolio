@@ -56,7 +56,14 @@ export default function AscendCharacter({ skin, body, hair, hairColour, eye, fac
     base.position.y = -0.06
     scene.add(base)
     const render = () => { if (!stopped) renderer.render(scene, camera) }
-    const reset = () => { character.rotation.y = 0; camera.position.set(0, 1.15, 3.2); controls.target.set(0, 1, 0); controls.update(); render() }
+    const headFocus = new THREE.Vector3(0, 1.8, 0)
+    const reset = () => {
+      character.rotation.y = 0
+      camera.position.copy(headFocus).add(new THREE.Vector3(0, 0, 3.2))
+      controls.target.copy(headFocus)
+      controls.update()
+      render()
+    }
     reset()
     actions.current = {
       rotate: direction => { character.rotation.y += direction * Math.PI / 8; render() },
@@ -140,6 +147,17 @@ export default function AscendCharacter({ skin, body, hair, hairColour, eye, fac
           character.position.set(-center.x * scale, -bounds.min.y * scale, -center.z * scale)
           framed = true
         }
+        // The first assembled part is the head. Follow its height for either body type,
+        // preserving the visitor's zoom and viewing angle when appearances change.
+        character.updateMatrixWorld(true)
+        const headBounds = new THREE.Box3().setFromObject(meshes[0], true)
+        const nextFocus = headBounds.getCenter(new THREE.Vector3())
+        nextFocus.x = 0
+        nextFocus.z = 0
+        camera.position.add(nextFocus.clone().sub(controls.target))
+        headFocus.copy(nextFocus)
+        controls.target.copy(headFocus)
+        controls.update()
         setFailed(false)
         setStatus('Character loaded. Drag to rotate or use the controls below.')
         render()
