@@ -36,6 +36,7 @@ export default function AscendCharacter({ skin, body, hair, hairColour, eye, fac
     container.appendChild(renderer.domElement)
     renderer.domElement.setAttribute('aria-label', 'Ascend character. Drag to rotate, scroll or pinch to zoom. Alternative controls below.')
     const scene = new THREE.Scene()
+    scene.background = new THREE.Color('#596775')
     const camera = new THREE.PerspectiveCamera(35, 1, 0.01, 100)
     const controls = new OrbitControls(camera, renderer.domElement)
     controls.enablePan = false
@@ -66,7 +67,7 @@ export default function AscendCharacter({ skin, body, hair, hairColour, eye, fac
     const resize = new ResizeObserver(() => {
       camera.aspect = container.clientWidth / container.clientHeight
       camera.updateProjectionMatrix()
-      renderer.setSize(container.clientWidth, container.clientHeight)
+      renderer.setSize(container.clientWidth, container.clientHeight, false)
       render()
     })
     resize.observe(container)
